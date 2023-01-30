@@ -41,11 +41,18 @@
       <section class="search">
         <div class="container">
           <form class="search-form">
-            <input class="search-form__input form-control" type="search" name="search" placeholder="Search" aria-label="Search" data-search-input>
+            <input
+              class="search-form__input form-control"
+              type="search"
+              name="search"
+              placeholder="Search"
+              aria-label="Search"
+              data-search-input
+            />
           </form>
         </div>
       </section>
-      
+
       <section class="countries">
         <div class="container">
           <div class="countries__wrapper" data-countries-wrapper></div>
@@ -59,6 +66,7 @@
       <div class="card-box card" data-country-card>
         <div class="card-box__img-wrapper">
           <img class="card-box__img card-img-top" data-country-img />
+          <button class="card-box__btn" data-modal-open="#modal">INFO</button>
         </div>
         <div class="card-box__content card-body">
           <h2 class="card-box__title card-title" data-country-title></h2>
@@ -68,6 +76,34 @@
       </div>
     </template>
     <!-- /TEMPLATE -->
+
+    <!-- MODAL -->
+    <div class="info-modal show" id="modal">
+      <div class="info-modal__inner">
+        <div class="info-modal__top">
+          <h2 class="info-modal__top-heading">INFO</h2>
+          <button class="btn btn-close btn-small" data-modal-close></button>
+        </div>
+        <div class="info-modal__bottom">
+          <div class="info-modal__map">
+            <iframe
+              width="600"
+              height="450"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="info-modal__content">
+            <h2 class="info-modal__title"></h2>
+            <p class="info-modal__capital-text"></p>
+            <p class="info-modal__continent-text"></p>
+            <p class="info-modal__lang-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /MODAL -->
 
     <!-- SCRIPTS -->
     <script src="js/main.js"></script>
