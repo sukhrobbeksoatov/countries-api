@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="images/"> -->
 
-  <!-- Favicon -->
-  <!-- <link rel="shortcut icon" href="images/"> -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <h1 class="logo__heading">
+            <a class="logo__link" href="/">COUNTRIES</a>
+          </h1>
+        </div>
+      </div>
+    </header>
+    <!-- /HEADER -->
 
-  <!-- HEADER -->
-  <!-- /HEADER -->
+    <!-- MAIN -->
+    <main class="main-content">
+      <section class="search">
+        <div class="container">
+          <form class="search-form">
+            <input class="search-form__input form-control" type="search" name="search" placeholder="Search" aria-label="Search" data-search-input>
+          </form>
+        </div>
+      </section>
+      
+      <section class="countries">
+        <div class="container">
+          <div class="countries__wrapper" data-countries-wrapper></div>
+        </div>
+      </section>
+    </main>
+    <!-- /MAIN -->
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-  </main>
-  <!-- /MAIN CONTENT -->
+    <!-- TEMPLATE -->
+    <template data-country-template>
+      <div class="card-box card" data-country-card>
+        <div class="card-box__img-wrapper">
+          <img class="card-box__img card-img-top" data-country-img />
+        </div>
+        <div class="card-box__content card-body">
+          <h2 class="card-box__title card-title" data-country-title></h2>
+          <p class="card-box__text card-text" data-country-capital-text></p>
+          <p class="card-box__text card-text" data-country-continent-text></p>
+        </div>
+      </div>
+    </template>
+    <!-- /TEMPLATE -->
 
-  <!-- FOOTER -->
-  <!-- /FOOTER -->
-
-
-  <!-- SCRIPTS -->
-  <!-- <script src="js/main.js"></script> -->
-
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 /* CUSTOM PROPS */
 :root {
-  --primary-bg-color: #fff;
+  --primary-bg-color: #222;
   --text-color: #000;
 }
 
@@ -37,21 +37,14 @@ img {
 
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--primary-bg-color);
   display: flex;
   flex-direction: column;
-}
-
-/* CONTAINER */
-.container {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* SCROLL BAR */
@@ -78,24 +71,10 @@ body {
   }
 }
 
-/* VISUALLY HIDDEN */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  padding: 50px 0;
 }
 
 /* BUTTON */
@@ -107,4 +86,76 @@ body {
   text-decoration: none;
 }
 
-/* RETINA BGS *//*# sourceMappingURL=main.css.map */
+/* RETINA BGS */
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.site-header {
+  text-align: center;
+}
+
+/* LOGO */
+.logo__link {
+  text-decoration: none;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.search-form .search-form__input {
+  max-width: 600px;
+}
+
+/* COUNTRIES */
+.countries__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  row-gap: 100px;
+}
+
+.card-box {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box__img {
+  max-width: 320px;
+  height: 213px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top center;
+     object-position: top center;
+  width: 100%;
+}
+
+.card-box__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px 30px;
+}
+
+.card-title {
+  margin-top: auto;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-text:not(:last-child) {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=main.css.map */

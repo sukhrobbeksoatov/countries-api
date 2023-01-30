@@ -1,0 +1,46 @@
+/* COUNTRIES */
+.countries__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  row-gap: 100px;
+}
+
+.card-box {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// .card-box__img-wrapper {
+// }
+
+.card-box__img {
+  max-width: 320px;
+  height: 213px;
+  object-fit: contain;
+  object-position: top center;
+  width: 100%;
+}
+
+.card-box__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px 30px;
+}
+
+.card-title {
+  margin-top: auto;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-text {
+&:not(:last-child) {
+  margin-bottom: 10px;
+}
+}
